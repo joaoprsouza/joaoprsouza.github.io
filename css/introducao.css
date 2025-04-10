@@ -1,0 +1,65 @@
+.introducao-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 120px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0px auto;
+  /*ALINHA TODOS OS ITENS AO CENTRO DO CONTAINER*/
+  align-items: center;
+}
+.introducao-desc h1 {
+  position: relative;
+  font-size: 4.5rem;
+  font-size: 1.2;
+  margin-bottom: 30px;
+}
+.introducao-desc h1::before {
+  display: block;
+  content: "";
+  /*Fica absoluto ao elemento filho*/
+  position: absolute;
+  /*Ajusta a quantos pixel ficará do top e da esqueda do título*/
+  top: -20px;
+  left: -40px;
+  /*Mantém a altura e largura original do detalhe*/
+  width: 130px;
+  height: 100px;
+  /*Propriedade que adiciona a imagem ao fundo / não repete / centraliza*/
+  background: url("/img/detalhe.svg") no-repeat center;
+  /*Joga a o detalhe para tras do título*/
+  z-index: -1;
+}
+.introducao-desc p {
+  color: #525252;
+  font-size: 1.5rem;
+}
+@media (max-width: 1000px) {
+  .introducao-desc h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .introducao-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao-desc h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .introducao-desc h1::before {
+    top: -20px;
+    left: 0px;
+    width: 40px;
+    height: 10px;
+  }
+}
+@media (max-width: 400px){
+  .introducao-container {
+    grid-template-columns: 1fr;
+  }
+  .introducao-container img{
+    display: none;
+  }
+}

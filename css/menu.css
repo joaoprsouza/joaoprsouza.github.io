@@ -1,0 +1,39 @@
+.menu {
+  display: flex;
+  padding: 40px 20px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.menu-item {
+  display: flex;
+  /*JOGA O ITEM PARA BAIXO CASO NÃO HAJA ESPAÇO*/
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  /*QUANDO O PROXIMO ITEM QUEBRAR PARA BAIXO, ELE FICARA ALINHADO AO CENTRO*/
+  justify-content: center;
+}
+.menu-item a {
+  font-size: 1.125rem;
+  color: #111111;
+  line-height: 1.3;
+  /*PADDING CRIADO PARA AUMENTAR A ÁREA DE CLICK PARA O USUÁRIO*/
+  padding: 10px 15px;
+  /*PARA PEGAR CORRETAMENTE O TAMANHO DO PADDING QUE FOI COLOCADO*/
+  display: block;
+}
+@media (max-width: 800px) {
+  .menu {
+    /*DEFINE COMO COLUNA DEIXANDO UM ABAIXO DO OUTRO NO MENU*/
+    flex-direction: column;
+    gap: 40px;
+    /*DIMINUI O PADDING DO HEADER*/
+    padding: 20px;
+  }
+  .menu-item a {
+    background: linear-gradient(#ccf235, #70da1c);
+    border-radius: 4px;
+  }
+}

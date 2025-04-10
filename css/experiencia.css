@@ -1,0 +1,104 @@
+.experiencia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 120px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+/*ADCIONA A COR NO TEXTO DO SUBTITULO QUE ETÁ DENTRO DE EXPERIENCIA*/
+.experiencia .subtitulo {
+  color: #e0e0e0;
+}
+.experiencia-apresentacao { 
+  font-size: 1.5rem;
+  color: #707070;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  line-height: 32px;
+}
+.experiencia-apresentacao strong {
+  color: #111111;
+}
+.projeto-lista {
+  position: relative;
+  display: block;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 20px 20px;
+}
+.projeto-lista::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(#ccf235, #70da1c);
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  left: -4px;
+  top: 20px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+/*Usando o :not(:consição) ele não adiciona margin-bottom para o ultimo item*/
+.projeto-lista:not(:last-child) {
+  margin-bottom: 20px;
+}
+.projeto-ano {
+  position: absolute;
+  font-size: 0.875rem;
+  color: #525252;
+  /*Deu o espaçamento de -100px para a esquerda para que o texto pudesse ser alinhado à direita do espaço que sobrou*/
+  left: -100px;
+  text-align: right;
+  top: 22px;
+  width: 80px;
+}
+.projeto-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.projeto-item p {
+  color: #525252;
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.projeto-experiencia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.projeto-experiencia li {
+  display: inline;
+  color: #141414;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 4px;
+  align-self: start;
+}
+@media (max-width: 800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .experiencia .subtitulo {
+    color: #141414;
+  }
+  .experiencia .experiencia-apresentacao {
+    font-size: 1.25rem;
+  }
+  .projeto-ano {
+    position: initial;
+    order: 1;
+    text-align: left;
+    width: 100px;
+  }
+  .projeto-ano::before {
+    content: "Ano: ";
+  }
+}
+@media (max-width: 400px) {
+  .projeto-lista {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,169 @@
+.formacao {
+  background: linear-gradient(26.5deg, #525252, #141414);
+}
+.formacao-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0px 120px;
+  padding: 120px 20px;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.formacao-container .subtitulo {
+  color: #000000;
+}
+.formacao-apresentacao {
+  display: block;
+  font-size: 1.5rem;
+  color: #a3a3a3;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  line-height: 32px;
+}
+.formacao-apresentacao strong {
+  color: #ffffff;
+}
+.formacao-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+.formacao-item {
+  background: #000000;
+  padding: 20px;
+  border-radius: 4px;
+  /*flex: valor; -> Ideal para fazer com que o item ocupe espaço de forma igual ou proporcional dentro de um container flex (normalmente usado o padrão nº1.*/
+  flex: 1;
+  position: relative;
+}
+.formacao-item::before {
+  content: "";
+  background: linear-gradient(#ccf235, #70da1c);
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  left: -4px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.formacao-nivel {
+  display: block;
+  color: #a3a3a3;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.formacao-item h3 {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  min-height: 50px; /* define uma altura mínima para o elemento */
+  margin-bottom: 40px;
+}
+.formacao-faculdade {
+  display: block;
+  color: #a3a3a3;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.cursos {
+  display: block;
+  position: relative;
+}
+.cursos::before {
+  display: block;
+  content: "";
+  background-image: url(/img/cursos.svg);
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -40px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.curso-form {
+  display: grid;
+  font-size: 0.875rem;
+  color: #8f8f8f;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.curso-hora {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+.curso-hora h3 {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+.curso-hora span {
+  color: #8f8f8f;
+  font-size: 1.125rem;
+  text-align: right;
+}
+.idiomas {
+  margin-top: 60px;
+  position: relative;
+}
+.idiomas::before {
+  content: "";
+  background-image: url(/img/idiomas.svg);
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -40px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.idioma-form {
+  display: grid;
+  font-size: 0.875rem;
+  color: #8f8f8f;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.idioma-hora {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+.idioma-hora h3 {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+.idioma-hora span {
+  color: #8f8f8f;
+  font-size: 1.125rem;
+  text-align: right;
+}
+
+@media(max-width: 800px){
+  .formacao-container{
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao .subtitulo{
+    color:#ffffff;
+  }
+  .formacao-apresentacao{
+    font-size: 1.25rem;
+  }
+  .idiomas::before{
+    top: -30px;
+    left: 0px;
+  }
+  .cursos::before{
+    top: -30px;
+    left: 0px;
+  }
+}
